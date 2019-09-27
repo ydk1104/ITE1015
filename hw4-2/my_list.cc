@@ -14,7 +14,7 @@ string* split(const string& str, const string& delim) {
 	token = strtok(NULL, delim.c_str());
 	++idx;
 	}
-	while(idx < 9){
+	while(idx <= 9){
 		string_list[idx] = "";
 		idx++;
 	}
@@ -22,12 +22,17 @@ string* split(const string& str, const string& delim) {
 }
 
 struct Item {
-	std::string name;
-	std::string age;
-	std::string id;
-	std::string* subjects;
-	Item* next;
 	//implement this structure
+	std::string name, age, id;
+	std::string* subjects = NULL;
+	Item* next;
+	Item(){
+		name = "", age = "", id = "", subjects = NULL;
+	}
+	~Item(){
+		if(next != NULL) delete next;
+		if(subjects != NULL) delete[] subjects;
+	}
 };
 
 struct Item* create_item() {
@@ -45,9 +50,9 @@ void insert_item(struct Item *prev_item, struct Item *item) {
 }
 
 ostream& operator <<(ostream& out, string* s){
-	for(int i=0; s[i]!=""; i++){
+	for(int i=0; i<=9 && s[i]!=""; i++){
 		std::cout << s[i];
-		if(s[i+1] != "") std:cout << " & ";
+		if(i<9 && s[i+1] != "") std:cout << " & ";
 	}
 	return out;
 }
@@ -75,8 +80,10 @@ int main(void){
 		temp->id = s[2];
 		temp->subjects = split(s[3], delim[1]);
 		insert_item(head, temp);
+		delete[] s;
 	}
 	print(head);
+	delete head;
 	fin.close();
 	return 0;
 }
