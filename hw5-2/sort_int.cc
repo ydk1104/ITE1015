@@ -9,4 +9,5 @@ int main(void){
 	sort(arr, arr+N);
 	for(int i=0; i<N; i++) std::cout << arr[i] << ' ';
 	std::cout << '\n';
+	delete[] arr;
 }
