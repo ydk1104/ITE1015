@@ -22,5 +22,5 @@ int main(int argc, char** argv){
 		std::cout << '\n';
 	}
 	for(int i=0; i<N; i++) delete[] matrix[i];
-//	delete[] matrix;
+	delete[] matrix;
 }
