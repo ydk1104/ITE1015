@@ -44,7 +44,6 @@ void accountManager::create_new_account(){
 }
 
 void accountManager::deposit(int id, int money){
-	std::cout << id << ' ' << money << ' ' << arr[id].balance << ' ' << MAX << '\n';
 	if(arr[id].balance + money > MAX){
 		std::cout << "Failure: Deposit to user " << id << ' ' << money << '\n';
 	}
