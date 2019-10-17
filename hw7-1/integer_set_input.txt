@@ -1,0 +1,9 @@
+add 9
+add 6
+add 7
+add 9
+del 6
+del 6
+get 0
+get 3
+quit
