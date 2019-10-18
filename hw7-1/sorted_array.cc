@@ -7,9 +7,7 @@ SortedArray::~SortedArray(){};
 void SortedArray::AddNumber(int num){
 	numbers_.insert(std::lower_bound(numbers_.begin(),numbers_.end(),num),num);
 }
-std::vector<int> SortedArray::GetSortedAscending()const{
-	return numbers_;
-}
+std::vector<int> SortedArray::GetSortedAscending()const{return numbers_;}
 std::vector<int> SortedArray::GetSortedDescending()const{
 	std::vector<int> v = numbers_;
 //	std::sort(v.begin(), v.end(), std::greater<int>());
