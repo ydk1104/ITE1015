@@ -1,0 +1,8 @@
+add 1112222 hello
+add 2231144 nice to meet you
+add 1234321 too
+print 2231144
+list
+delete 1112222
+list
+quit
