@@ -1,0 +1,3 @@
+nonsquare 3 5
+square 7
+quit

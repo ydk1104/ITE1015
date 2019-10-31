@@ -1,0 +1,4 @@
+number 3
+square 2
+cube 4
+quit
