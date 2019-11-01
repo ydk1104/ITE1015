@@ -11,8 +11,7 @@ int main(void){
 			if(type=="rect") std::cin >> width;
 			std::cin >> ch;
 			Shape* temp = NULL;
-			if(type=="rect"){ temp = new Rectangle(x,y,length,width,ch);
-			}
+			if(type=="rect") temp = new Rectangle(x,y,length,width,ch);
 			else if(type=="diamond") temp = new Diamond(x,y,length,ch);
 			else if(type =="square") temp = new Square(x,y,length,ch);
 			if(temp==NULL) continue;
