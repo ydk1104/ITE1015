@@ -12,7 +12,7 @@ void Shape::Draw(int canvas_width, int canvas_height){
 	for(int i=0; i<canvas_height; i++){
 		std::cout << i;
 		for(int j=0; j<canvas_width; j++){
-			if(Check(j, i)) std::cout<<_ch;
+			if(Check(i, j)) std::cout<<_ch;
 			else std::cout << '.';
 		}
 		std::cout << '\n';
@@ -40,6 +40,6 @@ Diamond::Diamond(int x, int y, int length, char ch):Shape(x,y,length,ch){}
 double Diamond::GetArea(){return 2*_length*_length;}
 double Diamond::GetPerimeter(){return sqrt(2)*4*_length;}
 bool Diamond::Check(int x,int y){
-		return abs(x-_x)+abs(y-_y)<=_length;
+		return abs(y-_x)+abs(x-_y)<=_length;
 }
 //void Diamond::Draw(int canvas_width, int canvas_height){};
