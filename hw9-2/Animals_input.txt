@@ -1,0 +1,7 @@
+z Tom 2 21
+z Amy 3 22
+c Kitty 4 mouse
+c King 3 tower
+z Elen 5 30
+0
+
