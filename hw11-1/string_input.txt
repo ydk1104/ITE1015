@@ -1,0 +1,6 @@
+new
+Hanyang
+University
+a * 3
+a + b
+quit
